@@ -1,0 +1,31 @@
+<div class="side-bar">
+  <ul class="side-bar-mlist">
+    <li [ngClass]="{ 'has-sub':menu.submenus!==undefined, 'active':getToggle(i) }" *ngFor="let menu of menus;let i=index;" >
+      <a href="{{menu.link}}" class="txt" (click)="toggled($event, i)" >{{menu.tit}}</a>
+      <ul class="sub-list" *ngIf="menu.submenus!==undefined" #submenugroup [style.height.px]="getToggle(i)?submenugroup.scrollHeight:0">
+        <li *ngFor="let submenu of menu.submenus"><a href="{{submenu.link}}" class="txt">{{submenu.tit}}</a></li>
+      </ul>
+    </li>
+   <!-- <li><a href="" class="txt">UI Elements</a>
+      <ul class="sub-list">
+        <li><a href="" class="txt">menu1</a></li>
+        <li><a href="" class="txt">menu2</a></li>
+        <li><a href="" class="txt">menu3</a></li>
+      </ul>
+    </li>
+    <li><a href="" class="txt">Tables</a>
+      <ul class="sub-list">
+        <li><a href="" class="txt">menu1</a></li>
+        <li><a href="" class="txt">menu2</a></li>
+        <li><a href="" class="txt">menu3</a></li>
+      </ul>
+    </li>
+    <li><a href="" class="txt">Charts</a>
+      <ul class="sub-list">
+        <li><a href="" class="txt">menu1</a></li>
+        <li><a href="" class="txt">menu2</a></li>
+        <li><a href="" class="txt">menu3</a></li>
+      </ul>
+    </li>-->
+  </ul>
+</div>

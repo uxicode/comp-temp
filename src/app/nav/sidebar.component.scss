@@ -1,0 +1,61 @@
+@import "../../styles";
+/*side-menu*/
+.side-bar{@include add-prefix(box-sizing, border-box, webkit moz )}
+.side-bar-mlist{
+  width:100%;
+  margin:0;
+  padding:0;
+  li{
+    position:relative;
+    border-top:1px solid #545050;
+    &.has-sub.active>.txt{
+      @include add-shadow(  $y:4px, $blur:1px, $rgba:rgba(0,0,0, 0.15),  $prefixes:webkit moz )
+    }
+    &.has-sub .sub-list{
+      //background-color:#2d2d2d;
+      border-top:1px solid #3c3a3a;
+    }
+    &.active .sub-list{
+      //display:block;
+    }
+    &.has-sub .sub-list li:first-child{
+      margin-top:10px;
+    }
+    &.has-sub .sub-list li:last-child{
+      margin-bottom:10px;
+    }
+    &.has-sub .sub-list li{
+      border-top:none;
+      //border-bottom:1px solid #383737;
+    }
+    &.has-sub .sub-list li>.txt:after{
+      @include add-bullet($top:12px, $left:12px)
+    }
+
+    &.has-sub>.txt:before{
+      @include add-arrow($top:9px, $right:12px);
+      //$property, $value, $prefixes:()
+      @include add-prefix( transform, rotate(0), webkit moz )
+      @include add-prefix( transition, transform .3s ease, webkit moz )
+    }
+    &.has-sub.active>.txt:before{
+      @include add-prefix( transform, rotate(180deg), webkit moz )
+    }
+
+    &.has-sub .sub-list li>.txt{
+      padding-left:25px;
+    }
+    .txt{
+      display:block;
+      padding:5px 0 5px 12px;
+      color:#a7a7a7;
+    }
+
+  }
+  .sub-list{
+    //display:none;
+    overflow: hidden;
+    height:0;
+    @include add-prefix( transition, height .5s ease, webkit moz )
+  }
+}

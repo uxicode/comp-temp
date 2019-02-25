@@ -1,0 +1,15 @@
+<div class="col-md-3 left-col">
+  <div class="logo">
+    <a href="" class="logo-tit"><img src="{{logoImgURL}}"  alt=""/><span class="logo-txt">로고 타이틀</span></a>
+  </div>
+  <div class="clearfix"></div>
+  <div class="profile">
+    <div class="profile-img"><img [src]="avatarImgURL" alt=""/></div>
+    <div class="profile-info">
+      <p>Welcome </p>
+      <p>{{name}}</p>
+    </div>
+  </div>
+
+  <app-sidebar [menus]="sideMenus"></app-sidebar>
+</div>

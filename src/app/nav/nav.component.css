@@ -1,0 +1,193 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, big, cite, code, del, dfn, em, font, img, ins, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: none 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+a {
+  background-color: transparent;
+  text-decoration: none; }
+
+a:active, a:hover {
+  outline: 0; }
+
+a:active, a:hover, a:visited, a:link {
+  text-decoration: none; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0;
+  vertical-align: top; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  border: 1px solid #999; }
+
+button {
+  overflow: visible; }
+
+button, select {
+  text-transform: none; }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"], input[type="radio"] {
+  padding: 0;
+  vertical-align: middle;
+  border: none !important; }
+
+input[type="search"] {
+  -webkit-appearance: textfield; }
+
+input[type="image"] {
+  border: none !important;
+  padding: 0; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+legend {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  font-size: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+li {
+  list-style: none; }
+
+address, em, i {
+  font-style: normal; }
+
+legend, caption {
+  display: none; }
+
+fieldset, label, input, select, textarea, button, label img, fieldset img {
+  vertical-align: middle; }
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+.left-col {
+  width: 250px;
+  position: absolute;
+  min-height: 100%;
+  background-color: #333333;
+  padding: 0; }
+
+.profile {
+  display: table;
+  width: 100%;
+  padding: 10px 15px;
+  border-top: 1px solid #666; }
+  .profile-img, .profile-info {
+    display: table-cell;
+    vertical-align: middle; }
+    .profile-img img, .profile-info img {
+      width: 50px;
+      border-radius: 50%;
+      border: 5px solid #fff; }
+  .profile-info {
+    padding-left: 10px;
+    color: #fff; }
+
+.logo {
+  float: left;
+  padding: 10px 15px;
+  position: relative;
+  min-height: 50px; }
+  .logo-tit {
+    color: #fff; }
+    .logo-tit .logo-txt {
+      display: inline-block;
+      padding-left: 10px;
+      color: #fff;
+      line-height: 50px;
+      vertical-align: middle; }
+    .logo-tit img {
+      width: 50px;
+      border-radius: 50%; }
+
+/*# sourceMappingURL=nav.component.css.map */
