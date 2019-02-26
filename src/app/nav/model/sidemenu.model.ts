@@ -1,4 +1,4 @@
-export class NavModel {
+export class SidemenuModel {
   constructor(
     public tit:string,
     public link:string,

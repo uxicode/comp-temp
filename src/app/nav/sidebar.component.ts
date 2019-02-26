@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {NavModel} from './nav.model';
+import {SidemenuModel} from './model/sidemenu.model';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,14 +7,14 @@ import {NavModel} from './nav.model';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  @Input() menus:NavModel[];
+  @Input() menus:SidemenuModel[];
 
   toggles:Array<any>=[];
   constructor() { }
 
   ngOnInit() {
     for(let p of this.menus){
-      this.toggles.push({item:p.tit, toggle:false, hasSub:p.submenus!==undefined?true:false, subH:p.submenus!==undefined?p.submenus.length*30:0});
+      this.toggles.push({item:p.tit, toggle:false, hasSub:p.submenus!==undefined?true:false});
     }
   }
 

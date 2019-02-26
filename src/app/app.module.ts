@@ -2,18 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
 import {ChanceService} from './utils/chance.service';
-import { SidebarComponent } from './nav/sidebar.component';
+import {NavModule} from './nav/nav.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavComponent,
-    SidebarComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NavModule
   ],
   providers: [ChanceService],
   bootstrap: [AppComponent]

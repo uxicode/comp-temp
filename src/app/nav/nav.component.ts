@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ChanceService} from '../utils/chance.service';
-import {NavModel} from './nav.model';
+import {SidemenuModel} from './model/sidemenu.model';
 
 @Component({
   selector: 'app-nav',
@@ -13,19 +13,19 @@ export class NavComponent implements OnInit {
   logoImgURL:string;
   avatarImgURL:string;
 
-  sideMenus:NavModel[]=[
-    new NavModel('Form', '', [
+  sideMenus:SidemenuModel[]=[
+    new SidemenuModel('Form', '', [
       {tit:'General Form', link:''},
       {tit:'Form Validation', link:''},
       {tit:'Form Button', link:''}
     ] ),
-    new NavModel('UI Elements', '', [
+    new SidemenuModel('UI Elements', '', [
       {tit:'menu1', link:''},
       {tit:'menu2', link:''},
       {tit:'menu3', link:''}
     ] ),
-    new NavModel('Tables', '' ),
-    new NavModel('Charts', '', [
+    new SidemenuModel('Tables', '' ),
+    new SidemenuModel('Charts', '', [
       {tit:'menu1', link:''},
       {tit:'menu2', link:''},
       {tit:'menu3', link:''}
@@ -39,8 +39,6 @@ export class NavComponent implements OnInit {
     this.word=this.chance.word();
     this.logoImgURL = this.chance.avatar();
     this.avatarImgURL = this.chance.avatar(true);
-
-    console.log( this.sideMenus[0])
   }
 
 }
