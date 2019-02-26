@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
+// import {SidemenuModel} from './model/sidemenu.model';
+import {SidemenuRepositoryService} from './model/sidemenu.repository.service';
 import {SidemenuModel} from './model/sidemenu.model';
 
 @Component({
@@ -7,26 +9,24 @@ import {SidemenuModel} from './model/sidemenu.model';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  @Input() menus:SidemenuModel[];
+  // @Input() menus:SidemenuModel[];
 
-  toggles:Array<any>=[];
-  constructor() { }
-
-  ngOnInit() {
-    for(let p of this.menus){
-      this.toggles.push({item:p.tit, toggle:false, hasSub:p.submenus!==undefined?true:false});
-    }
+  public sideMenus:Array<any>=[];
+  constructor(public menusData:SidemenuRepositoryService) {
+    this.sideMenus=menusData.getToggleMenus();
   }
+
+  ngOnInit() {}
 
   toggled(event:any, idx:number):void {
     event.preventDefault();
-    this.toggles.filter( (item, i) => i!==idx ).forEach( item =>item.toggle=false );
-    this.toggles[idx].toggle=!this.toggles[idx].toggle;
+   this.menusData.noSelectedToggleReset(idx);
+   this.menusData.setToggleChanged(idx);
     // this.toggles[idx]
     // console.log('클릭 idx='+idx )
   }
-  getToggle(idx:number):boolean{
-    return this.toggles[idx].toggle;
+  getToggleCheck(idx:number):boolean{
+   return this.menusData.getToggled(idx);
   }
 
 }

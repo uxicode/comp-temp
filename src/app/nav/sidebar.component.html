@@ -1,8 +1,8 @@
 <div class="side-bar">
   <ul class="side-bar-mlist">
-    <li [ngClass]="{ 'has-sub':menu.submenus!==undefined, 'active':getToggle(i) }" *ngFor="let menu of menus;let i=index;" >
-      <a href="{{menu.link}}" class="txt" (click)="toggled($event, i)" >{{menu.tit}}</a>
-      <ul class="sub-list" *ngIf="menu.submenus!==undefined" #submenugroup [style.height.px]="getToggle(i)?submenugroup.scrollHeight:0">
+    <li [ngClass]="{ 'has-sub':menu.submenus!==undefined, 'active':getToggleCheck(i) }" *ngFor="let menu of sideMenus;let i=index;" >
+      <a href="{{menu.link}}" class="txt"  (click)="toggled($event, i)">{{menu.tit}}</a>
+      <ul class="sub-list" *ngIf="menu.submenus!==undefined" #submenugroup [style.height.px]="getToggleCheck(i)?submenugroup.scrollHeight:0">
         <li *ngFor="let submenu of menu.submenus"><a href="{{submenu.link}}" class="txt">{{submenu.tit}}</a></li>
       </ul>
     </li>

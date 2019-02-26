@@ -13,25 +13,6 @@ export class NavComponent implements OnInit {
   logoImgURL:string;
   avatarImgURL:string;
 
-  sideMenus:SidemenuModel[]=[
-    new SidemenuModel('Form', '', [
-      {tit:'General Form', link:''},
-      {tit:'Form Validation', link:''},
-      {tit:'Form Button', link:''}
-    ] ),
-    new SidemenuModel('UI Elements', '', [
-      {tit:'menu1', link:''},
-      {tit:'menu2', link:''},
-      {tit:'menu3', link:''}
-    ] ),
-    new SidemenuModel('Tables', '' ),
-    new SidemenuModel('Charts', '', [
-      {tit:'menu1', link:''},
-      {tit:'menu2', link:''},
-      {tit:'menu3', link:''}
-    ] )
-    ];//end
-
   constructor(public chance:ChanceService) {}
 
   ngOnInit() {
